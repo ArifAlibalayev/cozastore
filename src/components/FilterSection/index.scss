@@ -1,0 +1,44 @@
+#Filter{
+  max-width: 75%;
+  margin: 5% auto;  
+  min-height: 35vh;
+  .filterBoxWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3%;
+    .filterBox{
+        transition: .2s linear;
+
+        .filterOverlay{
+            background-color: transparent;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            
+            top: 0;
+            transition: .2 linear;
+        }
+        border: 1px solid rgba($color: grey, $alpha: 0.3);
+        position: relative;
+        &:hover{
+            .filterOverlay{
+                background-color: #0352a7;
+                opacity: 0.5;
+                transition: .3s linear;
+            }
+            .filterContent{
+                color: white;
+                z-index: 5;
+            }
+        }
+        .filterBanner{
+            display: flex;
+            .filterContent{
+                position: absolute;
+                top: 10%;
+                left: 10%;
+            }
+        }
+    }
+  }
+}

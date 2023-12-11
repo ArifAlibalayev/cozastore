@@ -1,0 +1,41 @@
+#Hero{
+    background-image: url("https://preview.colorlib.com/theme/cozastore/images/slide-02.jpg.webp");
+    background-repeat: no-repeat;
+   
+    .heroContent{
+        margin: auto;
+        max-width: 75%;
+        display: flex;
+        min-height: 70vh;
+        // padding-left:10%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        line-height: 60px;
+        gap: 40px;
+        h2{
+            font-weight: 300;
+            font-size: 24px;
+        }
+        h1{
+            font-family: PlayfairDisplay-Bold;
+            font-size: 60px;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+        button{
+            border: none;
+            outline: none;
+            max-width: 150px;
+            width: 100%;
+            min-height: 50px;
+            background-color: #717fe0;
+            color: white;
+            transition: .2s linear;
+            border-radius: 25px;
+            &:hover{
+                background-color: #2b3159;
+            }
+        }
+    }
+}

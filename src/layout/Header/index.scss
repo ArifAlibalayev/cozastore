@@ -1,0 +1,68 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  #headerNavigation {
+    max-width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    min-height: 6vh;
+    align-items: center;
+    transition: .2s linear;
+    .logoside {
+      display: flex;
+      gap: 60px;
+      .logoBtns {
+        ul {
+          list-style: none;
+          display: flex;
+          gap: 25px;
+          li {
+            transition: 0.2s linear;
+            cursor: pointer;
+            &:hover {
+              color: #6c7ae0;
+            }
+          }
+        }
+      }
+    }
+    .sbmside {
+      display: flex;
+      gap: 25px;
+      font-size: 20px;
+
+      .fa-magnifying-glass {
+        cursor: pointer;
+
+        transition: 0.2s linear;
+        &:hover {
+          color: #6c7ae0;
+        }
+      }
+      .fa-heart {
+        cursor: pointer;
+
+        transition: 0.2s linear;
+        &:hover {
+          color: #6c7ae0;
+        }
+      }
+      .fa-basket-shopping {
+        cursor: pointer;
+
+        transition: 0.2s linear;
+        &:hover {
+          color: #6c7ae0;
+        }
+      }
+    }
+  }
+}
+
+.active{
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: .2s linear;
+}
