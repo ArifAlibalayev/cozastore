@@ -11,8 +11,9 @@ function Products() {
   const [isOpen, setIsOpen] = useState(false);
   const [propIndex, setPropIndex] = useState()
 
-  function handleModal() {
+  function handleModal(id) {
     setIsOpen(!isOpen);
+    setPropIndex(id)
     const index = apidata.findIndex
   }
 
@@ -56,7 +57,7 @@ function Products() {
           </div>
         </div>
         <div className="productFetched">
-        {isOpen ? <Modal check={isOpen} setcheck={setIsOpen} propid={}></Modal> : null}
+        {isOpen ? <Modal check={isOpen} setcheck={setIsOpen} propid={propIndex}></Modal> : null}
           {filteredProducts.map((x) =>
             loading ? (
               <h1>Loading...</h1>
@@ -68,7 +69,7 @@ function Products() {
                 </div>
                 <p>{x.name}</p>
                 <h5>${x.price}</h5>
-                <button onClick={handleModal}>open</button>
+                <button onClick={()=>handleModal(x.id)}>open</button>
                 
               </div>
               
