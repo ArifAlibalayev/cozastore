@@ -1,0 +1,38 @@
+#footer{
+margin-top: 200px;
+background-color: #222;
+width: 100%;
+min-height: 40vh;
+display: grid;
+place-items: center;
+.upperFooter{
+    max-width: 75%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    ul{
+        h3{
+            padding:20px 0;
+        }
+        list-style: none;
+        line-height: 40px;
+    }
+}
+}
+
+    // .footerGetInTouch{
+    //     font-size: 8px;
+    // }
+
+    .footerNewsletter{
+        input{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 1px solid rgba($color: #888888, $alpha: 0.7);
+            
+        }
+    }

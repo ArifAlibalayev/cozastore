@@ -4,7 +4,8 @@
    margin: auto;
    display: flex;
    flex-direction: column;
-   gap: 20px;
+   gap: 40px;
+   
    .productsTitle{
     h1{
         font-size: 34px;
@@ -27,22 +28,59 @@
 .productFetched{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 40px;
+  
+    
     .card{
-        
+        i{
+            transition: .3s linear;
+            opacity: 0;
+            
+        }
        .cardImg{
-        border: 1px solid rgba($color: grey, $alpha: 0.2);
+        &:hover{
+            i{
+                opacity: 1;
+                cursor: pointer;
+            }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+        img{
+            transition: .3s linear;
+           
+        }
         margin: 20px 0 ;
         position: relative;
+
+        .detailsBtn{
+            transition: .2s linear;
+           
+            position: absolute;
+            left: 10%;
+            top: 0;
+            z-index: 100;
+
+            i{
+                width: 30px;
+                min-height: 30px;
+                border-radius: 50%; 
+                display: grid;
+                place-items: center;
+              
+            }
+        }
+        &:hover{
+            overflow: visible;
+            img{
+                scale: 120%;
+            }
+           
+
+        }
         i{
             position: absolute;
             top: 3%;
             right: 3%;
             transition: .2s linear;
-            &:hover{
-                color: red;
-                
-            }
         }
        }
        p{
@@ -54,3 +92,4 @@
        }
     }
 }
+

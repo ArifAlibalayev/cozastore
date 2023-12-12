@@ -1,30 +1,83 @@
-.OverlayModal{
+.OverlayModal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba($color: black, $alpha: 0.75);
+  z-index: 1500;
+  display: grid;
+  place-items: center;
+  scroll-behavior: smooth;
+  .Modal {
+    opacity: 1 !important;
+    z-index: 2000 !important;
+    max-width: 75%;
+    margin: auto;
+    background-color: white;
     width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top:0;
-    background-color: rgba($color: black, $alpha: 0.75);
-    z-index: 1500;
-    display: grid;
-    place-items: center;
-    scroll-behavior: smooth;
-    .Modal{
-        opacity: 1 !important;
-        z-index: 2000 !important;
-        max-width: 75%;
-        margin: auto;
-        background-color: white;
-        width: 100%;
-        height:55%;
-        position: absolute;
-        left: 12%;
-    }
-   
+    min-height: 55%;
+    position: absolute;
+    left: 12%;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    outline: none;  
+    font-size: 24px;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+  }
 }
 
+.d-none {
+  display: none !important;
+}
 
-
-.d-none{
-    display: none !important;
+.modalCard {
+  display: flex;
+  .modalImgBox {
+    img {
+      width: 100%;
+      height: 70%;
+      object-fit: contain;
+    }
+  }
+  .modalContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-direction: column;
+    width: 30%;
+    h3{
+        letter-spacing: 2px;
+    }
+    span{
+        color: #888888;
+        font-size: 12px;
+    }
+  }
+  .modalSBM{
+    display: flex;
+    gap: 50px;
+    .addToBasket{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: grid;
+        place-content: center;
+        transition: .2s linear;
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+    }
+  }
 }

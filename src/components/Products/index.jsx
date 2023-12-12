@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
 import Modal from "../Modal";
 // import { BasketContext } from "../../Context/BasketProvider";
@@ -7,14 +7,13 @@ function Products() {
   const [apidata, setApidata] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
-  // const {basket, HandleBasket} = useContext(BasketContext)
   const [isOpen, setIsOpen] = useState(false);
   const [propIndex, setPropIndex] = useState()
 
   function handleModal(id) {
     setIsOpen(!isOpen);
     setPropIndex(id)
-    const index = apidata.findIndex
+    // const index = apidata.findIndex((x)=> x.id == id)
   }
 
 
@@ -34,6 +33,7 @@ function Products() {
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   };
+
 
   const filteredProducts =
     selectedCategory === "All"
@@ -64,12 +64,12 @@ function Products() {
             ) : (
               <div className="card" key={x.id}>
                 <div className="cardImg">
+                <div onClick={()=>handleModal(x.id)} className="detailsBtn" ><i class="fa-regular fa-eye"></i></div>
                   <img src={x.thumbnail} alt="" />
-                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-regular fa-heart "></i>
                 </div>
                 <p>{x.name}</p>
                 <h5>${x.price}</h5>
-                <button onClick={()=>handleModal(x.id)}>open</button>
                 
               </div>
               
