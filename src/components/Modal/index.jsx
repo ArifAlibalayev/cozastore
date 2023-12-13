@@ -34,7 +34,7 @@ function Modal({ check, setcheck, propid }) {
       <div className="OverlayModal">
         <div className="Modal">
           {loading ? <LoadingComp/> :
-          <div className="modalCard">
+          <div className="modalCard" key={apidata.id}>
           <div className="modalImgBox">
             <img src={apidata.thumbnail} alt="" />
           </div>

@@ -3,6 +3,7 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import MainLayout from './layout/MainLayout';
+import WishlistPage from './pages/WishlistPage';
 
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/Contact" element={<ContactPage />} />
+          <Route path="/Wishlist" element={<WishlistPage/>} />
+
           
 
         </Route>

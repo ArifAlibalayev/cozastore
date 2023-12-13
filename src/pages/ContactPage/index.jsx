@@ -1,8 +1,15 @@
 import React from 'react'
+import './index.scss'
+import ContactContent from '../../components/ContactContent'
 
 function ContactPage() {
   return (
-    <div>ContactPage</div>
+    <>
+    <section id='contact'>
+      <h1 style={{color:"white",textAlign:"center",lineHeight:'250px',fontSize:'48px'}}>Contact</h1>
+    </section>
+    <ContactContent/>
+    </>
   )
 }
 

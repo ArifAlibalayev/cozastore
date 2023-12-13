@@ -17,6 +17,21 @@ function BasketProvider({children}) {
       setBasket(updatedBasket); 
     }
       
+
+    // function increaseCount(item) {
+    //   const index = basket.findIndex((x) => x.id === item.id);
+    //   basket[index].count++
+    //   setBasket([...basket])
+    // }
+    // function decreaseCount(item) {
+    //   const index = basket.findIndex((x) => x.id === item.id);
+    //   if (basket[index].count === 1) {
+    //       return
+    //   }
+    //   basket[index].count--
+    //   setBasket([...basket])
+    // }
+
     }
 
     function DeleteItem(item) {

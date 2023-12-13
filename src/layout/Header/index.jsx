@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import useScrollPositon from "../../hook/useScrollPositon";
 import "./index.scss";
 import { BasketContext } from "../../Context/BasketContext";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   const [toggleMenu, setToggleMenu] = useState(true);
@@ -16,27 +17,28 @@ function Header() {
     <header className={`header ${!scroll ? "active" : ""}`}>
       <nav id="headerNavigation">
         <div className="logoside">
-          <div className="logo">
+          <Link to={"/"}><div className="logo">
             <img
               src="https://preview.colorlib.com/theme/cozastore/images/icons/logo-01.png.webp"
               alt=""
             />
-          </div>
+          </div></Link>
+          
           <div className="logoBtns">
             <ul>
-              <li>Home</li>
+            <NavLink to={"/"} className={true && "navd"}><li>Home</li></NavLink>
               <li>Shop</li>
               <li>Features</li>
               <li>Blog</li>
               <li>About</li>
-              <li>Contact</li>
+              <NavLink to={"/Contact"} className={true && "navd"}><li>Contact</li></NavLink>
             </ul>
           </div>
         </div>
         <div className="sbmside">
           <i class="fa-solid fa-magnifying-glass"></i>
           <i class="fa-solid fa-basket-shopping" onClick={HandleMenu}></i>
-          <i class="fa-regular fa-heart"></i>
+          <NavLink to={"/Wishlist"} className={true ? "activeLink" : ""}><i class="fa-regular fa-heart"></i></NavLink>
         </div>
       </nav>
       <div className={`toggleMenu ${!toggleMenu ? "toggleMenuActive" : ""}`}>
