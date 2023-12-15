@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./index.scss";
 import Modal from "../Modal";
 import { WishlistContext } from "../../Context/WishlistContext";
+import toast, { Toaster } from 'react-hot-toast';
 
 function Products() {
   // fetch Api
@@ -27,6 +28,10 @@ function Products() {
 
   // useContext for wishlist button 
   const {wishlist, AddToWishlist} = useContext(WishlistContext)
+
+  // using toast library
+
+
 
 
   function handleSearch(e) {
@@ -79,8 +84,9 @@ function Products() {
   return (
     <>
       <section id="Products">
+      <Toaster />
         <div className="productsTitle">
-          <h1>PRODUCT OVERVIEW</h1>
+          <h1 >PRODUCT OVERVIEW</h1>
         </div>
         <div className="productFilter">
           <div className="productBtns">
@@ -133,6 +139,7 @@ function Products() {
             )
           )}
         </div>
+        
       </section>
     </>
   );

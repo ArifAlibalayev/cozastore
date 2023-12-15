@@ -1,5 +1,85 @@
-#cContent{
-    max-width: 75%;
-    margin: 100px auto;
-    height: 50vh;
+#cContent {
+  max-width: 75%;
+  margin: 100px auto;
+  height: 50vh;
+  display: flex;
+  .sendMessage {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+    border: 1px solid rgba($color: #888888, $alpha: 0.5);
+    padding: 5%;
+    .emailBox {
+      display: flex;
+      border: 1px solid rgba($color: #888888, $alpha: 0.5);
+      padding: 15px;
+      gap: 10px;
+      i {
+        font-size: 24px;
+        color: rgba($color: #888888, $alpha: 0.8);
+      }
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding-top: 5px;
+      }
+   
+    }
+    button{
+        border-radius: 24px;
+        border: 1px solid black;
+        background-color: black;
+        color: white;
+        height: 30%;
+        transition: .2s linear;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(55, 55, 234);
+        }
+    }
+    textarea{
+        border: 1px solid rgba($color: #888888, $alpha: 0.5);
+        outline: none;
+        padding: 5px;
+    }
+  }
+  .addressContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 30px;
+    border: 1px solid rgba($color: #888888, $alpha: 0.5);
+    padding: 5%;
+    h4{
+        font-weight: 300;
+        font-size: 20px;
+    }
+    i{
+        line-height: 30px;
+    }
+    span{
+        color: rgb(72, 72, 246);
+        font-size: 14px;
+    }
+    p{
+        font-size: 14px;
+
+    }
+    .addressf {
+      display: flex;
+      gap: 10px;
+    }
+    .phoneNum {
+      display: flex;
+      gap: 10px;
+    }
+    .SaleSupp {
+      display: flex;
+      gap: 10px;
+    }
+  }
 }

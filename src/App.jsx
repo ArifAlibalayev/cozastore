@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import MainLayout from './layout/MainLayout';
 import WishlistPage from './pages/WishlistPage';
+import AboutPage from './pages/AboutPage';
 
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/Contact" element={<ContactPage />} />
           <Route path="/Wishlist" element={<WishlistPage/>} />
+          <Route path="/About" element={<AboutPage/>} />
+
 
           
 

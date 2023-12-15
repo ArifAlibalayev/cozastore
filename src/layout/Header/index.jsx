@@ -30,7 +30,7 @@ function Header() {
               <li>Shop</li>
               <li>Features</li>
               <li>Blog</li>
-              <li>About</li>
+              <NavLink to={"/About"} className={true && "navd"}><li>About</li></NavLink>
               <NavLink to={"/Contact"} className={true && "navd"}><li>Contact</li></NavLink>
             </ul>
           </div>

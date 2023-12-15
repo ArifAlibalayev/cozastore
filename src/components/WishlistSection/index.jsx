@@ -1,12 +1,14 @@
 import React, { useContext } from 'react'
 import './index.scss'
 import { WishlistContext } from '../../Context/WishlistContext'
+import { Toaster } from 'react-hot-toast'
 
 function WishlistSection() {
   const {wishlist, setWishlist, AddToWishlist} = useContext(WishlistContext)
 
   return (
     <section id='star'>
+      <Toaster/>
      <div className="wishlistWrapper">
         <h2 style={{textAlign:"center"}}>Wishlist : </h2>
         <div className="productFetched">
